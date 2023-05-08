@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #f3eeee;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Inter';
+        /* height: 100%; */
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      .all {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .first-block,
+      .second-block,
+      .third-block,
+      .forth-block {
+        width: 100%;
+      }
+
+      .second-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        /* padding: 1rem 1rem; */
+      }
+
+      .left-content {
+        width: 40%;
+      }
+
+      .right-content {
+        width: 70%;
+      }
+
+      .avatar,
+      .link,
+      .info,
+      .status {
+        background-color: #fff;
+        border: 1px solid #f3eeee;
+        border-radius: 10px;
+      }
+
+      .avatar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      .btn-follow {
+        background-color: #6da9e4;
+        border: 1px solid #6da9e4;
+        border-radius: 5px;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+
+      .btn-msg {
+        background-color: #fff;
+        border: 1px solid #6da9e4;
+        border-radius: 5px;
+        color: #6da9e4;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+
+      .img {
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        width: 140px;
+        border-radius: 50%;
+      }
+
+      .name {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .link,
+      .info {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+
+      .r-item,
+      .l-item {
+        border-bottom: 1px solid #f3eeee;
+      }
+
+      .r-item p,
+      .l-item p {
+        padding: 0 1.5rem;
+      }
+
+      .r-item:nth-child(even) p {
+        text-align: right;
+      }
+
+      .r-item:nth-child(odd) p,
+      .l-item:nth-child(odd) p {
+        font-weight: bold;
+      }
+
+      .left-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .right-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .status {
+        width: 100%;
+        padding: 1.5rem;
+      }
+
+      .status .title {
+        margin-bottom: 1rem;
+      }
+
+      .status p {
+        margin: 0;
+      }
+
+      .status p span:first-child {
+        color: #088395;
+        font-style: italic;
+        font-weight: 600;
+      }
+
+      .status p span:last-child {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      progress {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      progress::-webkit-progress-bar {
+        background-color: #f3eeee;
+        border-radius: 4px;
+      }
+
+      .r-content-ft {
+        display: flex;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <div class="first-block">
+        <div class="container">
+          <div class="left-content">
+            <div class="avatar">
+              <div class="img">
+                <img
+                  src="https://haycafe.vn/wp-content/uploads/2021/11/Anh-avatar-dep-chat-lam-hinh-dai-dien.jpg"
+                  alt=""
+                />
+              </div>
+              <div style="text-align: center">
+                <p class="name">John Doe</p>
+                <p class="title">Full Stack Developer</p>
+                <p class="address">Bay Area, San Francisco, CA</p>
+              </div>
+              <div>
+                <button class="btn-follow">Follow</button>
+                <button class="btn-msg">Message</button>
+              </div>
+            </div>
+            <div class="link">
+              <div class="r-item">
+                <p>Website</p>
+              </div>
+              <div class="r-item">
+                <p>https://bootdey.com</p>
+              </div>
+              <div class="r-item">
+                <p>Github</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Twitter</p>
+              </div>
+              <div class="r-item">
+                <p>@bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Instagram</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Facebook</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="info">
+              <div class="l-item">
+                <p>Full Name</p>
+              </div>
+              <div class="l-item">
+                <p>Kenneth Valdez</p>
+              </div>
+              <div class="l-item">
+                <p>Email</p>
+              </div>
+              <div class="l-item">
+                <p>fip@jukmuh.al</p>
+              </div>
+              <div class="l-item">
+                <p>Phone</p>
+              </div>
+              <div class="l-item">
+                <p>(239)816-9029</p>
+              </div>
+              <div class="l-item">
+                <p>Mobile</p>
+              </div>
+              <div class="l-item">
+                <p>(320)380-4539</p>
+              </div>
+              <div class="l-item">
+                <p>Address</p>
+              </div>
+              <div class="l-item">
+                <p>Bay Area, San Francisco, CA</p>
+              </div>
+            </div>
+            <div class="r-content-ft">
+              <div class="status">
+                <div class="title">
+                  <p>
+                    <span>assignment</span>
+                    <span>Project Status</span>
+                  </p>
+                </div>
+                <div>
+                  <p>Web Design</p>
+                  <progress value="85" max="100"></progress>
+                </div>
+                <div>
+                  <p>Website Markup</p>
+                  <progress value="80" max="100"></progress>
+                </div>
+                <div>
+                  <p>One Page</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                  <p>Mobile Template</p>
+                  <progress value="65" max="100"></progress>
+                </div>
+                <div>
+                  <p>Backend API</p>
+                  <progress value="75" max="100"></progress>
+                </div>
+              </div>
+              <div class="status">
+                <div class="title">
+                  <p>
+                    <span>assignment</span>
+                    <span>Project Status</span>
+                  </p>
+                </div>
+                <div>
+                  <p>Web Design</p>
+                  <progress value="85" max="100"></progress>
+                </div>
+                <div>
+                  <p>Website Markup</p>
+                  <progress value="80" max="100"></progress>
+                </div>
+                <div>
+                  <p>One Page</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                  <p>Mobile Template</p>
+                  <progress value="65" max="100"></progress>
+                </div>
+                <div>
+                  <p>Backend API</p>
+                  <progress value="75" max="100"></progress>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="second-block">
+        <div class="container">
+          <div class="left-content">
+            <div class="avatar">
+              <div class="img">
+                <img
+                  src="https://haycafe.vn/wp-content/uploads/2021/11/Anh-avatar-dep-chat-lam-hinh-dai-dien.jpg"
+                  alt=""
+                />
+              </div>
+              <div style="text-align: center">
+                <p class="name">John Doe</p>
+                <p class="title">Full Stack Developer</p>
+                <p class="address">Bay Area, San Francisco, CA</p>
+              </div>
+              <div>
+                <button class="btn-follow">Follow</button>
+                <button class="btn-msg">Message</button>
+              </div>
+            </div>
+            <div class="link">
+              <div class="r-item">
+                <p>Website</p>
+              </div>
+              <div class="r-item">
+                <p>https://bootdey.com</p>
+              </div>
+              <div class="r-item">
+                <p>Github</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Twitter</p>
+              </div>
+              <div class="r-item">
+                <p>@bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Instagram</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Facebook</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="info">
+              <div class="l-item">
+                <p>Full Name</p>
+              </div>
+              <div class="l-item">
+                <p>Kenneth Valdez</p>
+              </div>
+              <div class="l-item">
+                <p>Email</p>
+              </div>
+              <div class="l-item">
+                <p>fip@jukmuh.al</p>
+              </div>
+              <div class="l-item">
+                <p>Phone</p>
+              </div>
+              <div class="l-item">
+                <p>(239)816-9029</p>
+              </div>
+              <div class="l-item">
+                <p>Mobile</p>
+              </div>
+              <div class="l-item">
+                <p>(320)380-4539</p>
+              </div>
+              <div class="l-item">
+                <p>Address</p>
+              </div>
+              <div class="l-item">
+                <p>Bay Area, San Francisco, CA</p>
+              </div>
+            </div>
+            <div class="r-content-ft">
+              <div class="status">
+                <div class="title">
+                  <p>
+                    <span>assignment</span>
+                    <span>Project Status</span>
+                  </p>
+                </div>
+                <div>
+                  <p>Web Design</p>
+                  <progress value="85" max="100"></progress>
+                </div>
+                <div>
+                  <p>Website Markup</p>
+                  <progress value="80" max="100"></progress>
+                </div>
+                <div>
+                  <p>One Page</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                  <p>Mobile Template</p>
+                  <progress value="65" max="100"></progress>
+                </div>
+                <div>
+                  <p>Backend API</p>
+                  <progress value="75" max="100"></progress>
+                </div>
+              </div>
+              <div class="status">
+                <div class="title">
+                  <p>
+                    <span>assignment</span>
+                    <span>Project Status</span>
+                  </p>
+                </div>
+                <div>
+                  <p>Web Design</p>
+                  <progress value="85" max="100"></progress>
+                </div>
+                <div>
+                  <p>Website Markup</p>
+                  <progress value="80" max="100"></progress>
+                </div>
+                <div>
+                  <p>One Page</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                  <p>Mobile Template</p>
+                  <progress value="65" max="100"></progress>
+                </div>
+                <div>
+                  <p>Backend API</p>
+                  <progress value="75" max="100"></progress>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="left-content">
+            <div class="avatar">
+              <div class="img">
+                <img
+                  src="https://haycafe.vn/wp-content/uploads/2021/11/Anh-avatar-dep-chat-lam-hinh-dai-dien.jpg"
+                  alt=""
+                />
+              </div>
+              <div style="text-align: center">
+                <p class="name">John Doe</p>
+                <p class="title">Full Stack Developer</p>
+                <p class="address">Bay Area, San Francisco, CA</p>
+              </div>
+              <div>
+                <button class="btn-follow">Follow</button>
+                <button class="btn-msg">Message</button>
+              </div>
+            </div>
+            <div class="link">
+              <div class="r-item">
+                <p>Website</p>
+              </div>
+              <div class="r-item">
+                <p>https://bootdey.com</p>
+              </div>
+              <div class="r-item">
+                <p>Github</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Twitter</p>
+              </div>
+              <div class="r-item">
+                <p>@bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Instagram</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Facebook</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="info">
+              <div class="l-item">
+                <p>Full Name</p>
+              </div>
+              <div class="l-item">
+                <p>Kenneth Valdez</p>
+              </div>
+              <div class="l-item">
+                <p>Email</p>
+              </div>
+              <div class="l-item">
+                <p>fip@jukmuh.al</p>
+              </div>
+              <div class="l-item">
+                <p>Phone</p>
+              </div>
+              <div class="l-item">
+                <p>(239)816-9029</p>
+              </div>
+              <div class="l-item">
+                <p>Mobile</p>
+              </div>
+              <div class="l-item">
+                <p>(320)380-4539</p>
+              </div>
+              <div class="l-item">
+                <p>Address</p>
+              </div>
+              <div class="l-item">
+                <p>Bay Area, San Francisco, CA</p>
+              </div>
+            </div>
+            <div class="r-content-ft">
+              <div class="status">
+                <div class="title">
+                  <p>
+                    <span>assignment</span>
+                    <span>Project Status</span>
+                  </p>
+                </div>
+                <div>
+                  <p>Web Design</p>
+                  <progress value="85" max="100"></progress>
+                </div>
+                <div>
+                  <p>Website Markup</p>
+                  <progress value="80" max="100"></progress>
+                </div>
+                <div>
+                  <p>One Page</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                  <p>Mobile Template</p>
+                  <progress value="65" max="100"></progress>
+                </div>
+                <div>
+                  <p>Backend API</p>
+                  <progress value="75" max="100"></progress>
+                </div>
+              </div>
+              <div class="status">
+                <div class="title">
+                  <p>
+                    <span>assignment</span>
+                    <span>Project Status</span>
+                  </p>
+                </div>
+                <div>
+                  <p>Web Design</p>
+                  <progress value="85" max="100"></progress>
+                </div>
+                <div>
+                  <p>Website Markup</p>
+                  <progress value="80" max="100"></progress>
+                </div>
+                <div>
+                  <p>One Page</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                  <p>Mobile Template</p>
+                  <progress value="65" max="100"></progress>
+                </div>
+                <div>
+                  <p>Backend API</p>
+                  <progress value="75" max="100"></progress>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="left-content">
+            <div class="avatar">
+              <div class="img">
+                <img
+                  src="https://haycafe.vn/wp-content/uploads/2021/11/Anh-avatar-dep-chat-lam-hinh-dai-dien.jpg"
+                  alt=""
+                />
+              </div>
+              <div style="text-align: center">
+                <p class="name">John Doe</p>
+                <p class="title">Full Stack Developer</p>
+                <p class="address">Bay Area, San Francisco, CA</p>
+              </div>
+              <div>
+                <button class="btn-follow">Follow</button>
+                <button class="btn-msg">Message</button>
+              </div>
+            </div>
+            <div class="link">
+              <div class="r-item">
+                <p>Website</p>
+              </div>
+              <div class="r-item">
+                <p>https://bootdey.com</p>
+              </div>
+              <div class="r-item">
+                <p>Github</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Twitter</p>
+              </div>
+              <div class="r-item">
+                <p>@bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Instagram</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Facebook</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="info">
+              <div class="l-item">
+                <p>Full Name</p>
+              </div>
+              <div class="l-item">
+                <p>Kenneth Valdez</p>
+              </div>
+              <div class="l-item">
+                <p>Email</p>
+              </div>
+              <div class="l-item">
+                <p>fip@jukmuh.al</p>
+              </div>
+              <div class="l-item">
+                <p>Phone</p>
+              </div>
+              <div class="l-item">
+                <p>(239)816-9029</p>
+              </div>
+              <div class="l-item">
+                <p>Mobile</p>
+              </div>
+              <div class="l-item">
+                <p>(320)380-4539</p>
+              </div>
+              <div class="l-item">
+                <p>Address</p>
+              </div>
+              <div class="l-item">
+                <p>Bay Area, San Francisco, CA</p>
+              </div>
+            </div>
+            <div class="r-content-ft">
+              <div class="status">
+                <div class="title">
+                  <p>
+                    <span>assignment</span>
+                    <span>Project Status</span>
+                  </p>
+                </div>
+                <div>
+                  <p>Web Design</p>
+                  <progress value="85" max="100"></progress>
+                </div>
+                <div>
+                  <p>Website Markup</p>
+                  <progress value="80" max="100"></progress>
+                </div>
+                <div>
+                  <p>One Page</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                  <p>Mobile Template</p>
+                  <progress value="65" max="100"></progress>
+                </div>
+                <div>
+                  <p>Backend API</p>
+                  <progress value="75" max="100"></progress>
+                </div>
+              </div>
+              <div class="status">
+                <div class="title">
+                  <p>
+                    <span>assignment</span>
+                    <span>Project Status</span>
+                  </p>
+                </div>
+                <div>
+                  <p>Web Design</p>
+                  <progress value="85" max="100"></progress>
+                </div>
+                <div>
+                  <p>Website Markup</p>
+                  <progress value="80" max="100"></progress>
+                </div>
+                <div>
+                  <p>One Page</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                  <p>Mobile Template</p>
+                  <progress value="65" max="100"></progress>
+                </div>
+                <div>
+                  <p>Backend API</p>
+                  <progress value="75" max="100"></progress>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="third-block">
+        <div class="container">
+          <div class="left-content">
+            <div class="avatar">
+              <div class="img">
+                <img
+                  src="https://haycafe.vn/wp-content/uploads/2021/11/Anh-avatar-dep-chat-lam-hinh-dai-dien.jpg"
+                  alt=""
+                />
+              </div>
+              <div style="text-align: center">
+                <p class="name">John Doe</p>
+                <p class="title">Full Stack Developer</p>
+                <p class="address">Bay Area, San Francisco, CA</p>
+              </div>
+              <div>
+                <button class="btn-follow">Follow</button>
+                <button class="btn-msg">Message</button>
+              </div>
+            </div>
+            <div class="link">
+              <div class="r-item">
+                <p>Website</p>
+              </div>
+              <div class="r-item">
+                <p>https://bootdey.com</p>
+              </div>
+              <div class="r-item">
+                <p>Github</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Twitter</p>
+              </div>
+              <div class="r-item">
+                <p>@bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Instagram</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Facebook</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="info">
+              <div class="l-item">
+                <p>Full Name</p>
+              </div>
+              <div class="l-item">
+                <p>Kenneth Valdez</p>
+              </div>
+              <div class="l-item">
+                <p>Email</p>
+              </div>
+              <div class="l-item">
+                <p>fip@jukmuh.al</p>
+              </div>
+              <div class="l-item">
+                <p>Phone</p>
+              </div>
+              <div class="l-item">
+                <p>(239)816-9029</p>
+              </div>
+              <div class="l-item">
+                <p>Mobile</p>
+              </div>
+              <div class="l-item">
+                <p>(320)380-4539</p>
+              </div>
+              <div class="l-item">
+                <p>Address</p>
+              </div>
+              <div class="l-item">
+                <p>Bay Area, San Francisco, CA</p>
+              </div>
+            </div>
+            <div class="r-content-ft">
+              <div class="status">
+                <div class="title">
+                  <p>
+                    <span>assignment</span>
+                    <span>Project Status</span>
+                  </p>
+                </div>
+                <div>
+                  <p>Web Design</p>
+                  <progress value="85" max="100"></progress>
+                </div>
+                <div>
+                  <p>Website Markup</p>
+                  <progress value="80" max="100"></progress>
+                </div>
+                <div>
+                  <p>One Page</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                  <p>Mobile Template</p>
+                  <progress value="65" max="100"></progress>
+                </div>
+                <div>
+                  <p>Backend API</p>
+                  <progress value="75" max="100"></progress>
+                </div>
+              </div>
+              <div class="status">
+                <div class="title">
+                  <p>
+                    <span>assignment</span>
+                    <span>Project Status</span>
+                  </p>
+                </div>
+                <div>
+                  <p>Web Design</p>
+                  <progress value="85" max="100"></progress>
+                </div>
+                <div>
+                  <p>Website Markup</p>
+                  <progress value="80" max="100"></progress>
+                </div>
+                <div>
+                  <p>One Page</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                  <p>Mobile Template</p>
+                  <progress value="65" max="100"></progress>
+                </div>
+                <div>
+                  <p>Backend API</p>
+                  <progress value="75" max="100"></progress>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="forth-block">
+        <div class="container">
+          <div class="left-content">
+            <div class="avatar">
+              <div class="img">
+                <img
+                  src="https://haycafe.vn/wp-content/uploads/2021/11/Anh-avatar-dep-chat-lam-hinh-dai-dien.jpg"
+                  alt=""
+                />
+              </div>
+              <div style="text-align: center">
+                <p class="name">John Doe</p>
+                <p class="title">Full Stack Developer</p>
+                <p class="address">Bay Area, San Francisco, CA</p>
+              </div>
+              <div>
+                <button class="btn-follow">Follow</button>
+                <button class="btn-msg">Message</button>
+              </div>
+            </div>
+            <div class="link">
+              <div class="r-item">
+                <p>Website</p>
+              </div>
+              <div class="r-item">
+                <p>https://bootdey.com</p>
+              </div>
+              <div class="r-item">
+                <p>Github</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Twitter</p>
+              </div>
+              <div class="r-item">
+                <p>@bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Instagram</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+              <div class="r-item">
+                <p>Facebook</p>
+              </div>
+              <div class="r-item">
+                <p>bootdey</p>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="info">
+              <div class="l-item">
+                <p>Full Name</p>
+              </div>
+              <div class="l-item">
+                <p>Kenneth Valdez</p>
+              </div>
+              <div class="l-item">
+                <p>Email</p>
+              </div>
+              <div class="l-item">
+                <p>fip@jukmuh.al</p>
+              </div>
+              <div class="l-item">
+                <p>Phone</p>
+              </div>
+              <div class="l-item">
+                <p>(239)816-9029</p>
+              </div>
+              <div class="l-item">
+                <p>Mobile</p>
+              </div>
+              <div class="l-item">
+                <p>(320)380-4539</p>
+              </div>
+              <div class="l-item">
+                <p>Address</p>
+              </div>
+              <div class="l-item">
+                <p>Bay Area, San Francisco, CA</p>
+              </div>
+            </div>
+            <div class="r-content-ft">
+              <div class="status">
+                <div class="title">
+                  <p>
+                    <span>assignment</span>
+                    <span>Project Status</span>
+                  </p>
+                </div>
+                <div>
+                  <p>Web Design</p>
+                  <progress value="85" max="100"></progress>
+                </div>
+                <div>
+                  <p>Website Markup</p>
+                  <progress value="80" max="100"></progress>
+                </div>
+                <div>
+                  <p>One Page</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                  <p>Mobile Template</p>
+                  <progress value="65" max="100"></progress>
+                </div>
+                <div>
+                  <p>Backend API</p>
+                  <progress value="75" max="100"></progress>
+                </div>
+              </div>
+              <div class="status">
+                <div class="title">
+                  <p>
+                    <span>assignment</span>
+                    <span>Project Status</span>
+                  </p>
+                </div>
+                <div>
+                  <p>Web Design</p>
+                  <progress value="85" max="100"></progress>
+                </div>
+                <div>
+                  <p>Website Markup</p>
+                  <progress value="80" max="100"></progress>
+                </div>
+                <div>
+                  <p>One Page</p>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                  <p>Mobile Template</p>
+                  <progress value="65" max="100"></progress>
+                </div>
+                <div>
+                  <p>Backend API</p>
+                  <progress value="75" max="100"></progress>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

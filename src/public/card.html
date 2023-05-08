@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container-child {
+        width: 410px;
+        height: 245px;
+        position: absolute;
+        background: #000000;
+        border-radius: 15px;
+      }
+
+      .box1 {
+        position: absolute;
+        width: 410px;
+        height: 73px;
+        top: 45px;
+
+        background: #ffffff;
+      }
+
+      .box2 {
+        position: absolute;
+        width: 110px;
+        height: 110px;
+
+        background: #ffffff;
+        border-radius: 5px;
+        top: -19px;
+        left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .info {
+        position: absolute;
+        list-style-type: none;
+        width: 200px;
+        height: 100px;
+        bottom: 5px;
+        right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+      }
+
+      li {
+        color: #fff;
+        display: flex;
+        width: 200px;
+        height: 20px;
+
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      p {
+        width: 160px;
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .rectangle {
+        background-color: #fff;
+        width: 16px;
+        height: 16px;
+
+        background: #d9d9d9;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin-left: 40px; */
+      }
+
+      img {
+        width: 98%;
+        height: 98%;
+      }
+
+      h4 {
+        position: absolute;
+        right: 40px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-child">
+        <div class="box1">
+          <div class="box2">
+            <img src="{{qrcode}}" alt="qrcode" />
+          </div>
+          <h4>{{name}}</h4>
+        </div>
+
+        <ul class="info">
+          <li>
+            <p>{{phone}}</p>
+            <span class="rectangle"
+              ><i class="fa-solid fa-phone fa-2xs" style="color: #000000"></i>
+            </span>
+          </li>
+          <li>
+            <p>{{email}}</p>
+            <span class="rectangle"
+              ><i class="fa-solid fa-envelope fa-2xs" style="color: #000000"></i
+            ></span>
+          </li>
+          <li>
+            <p>{{github}}</p>
+            <span class="rectangle"
+              ><i class="fa-brands fa-github fa-2xs" style="color: #000000"></i>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

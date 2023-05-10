@@ -17,7 +17,7 @@ class UserService {
   }
 
   async mapData(user) {
-    const url = 'https://ae54-123-17-150-73.ngrok-free.app/';
+    const url = 'http://192.168.1.6:3000/';
     user.avatar = url + user?.avatar;
     user.video = url + user?.video;
     user.url = url + user?.url?.slice(1);

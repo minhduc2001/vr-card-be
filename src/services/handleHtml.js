@@ -32,7 +32,7 @@ class HandleHtml {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    await page.goto(`http://localhost:3000/api/users/test/${user.id}`, {
+    await page.goto(`http://192.168.1.6:3000/api/users/test/${user.id}`, {
       waitUntil: 'networkidle0',
     });
 
@@ -46,7 +46,7 @@ class HandleHtml {
 
     require('fs').writeFileSync(pathFile, screenshot);
     await browser.close();
-    const urlHost = 'https://ae54-123-17-150-73.ngrok-free.app';
+    const urlHost = 'http://192.168.1.6:3000';
     return {
       urlHost: urlHost + `/public/images/${date}_${user.id}.png`,
       url: `/public/images/${date}_${user.id}.png`,

@@ -11,6 +11,7 @@ require('dotenv').config();
 require('./src/config/db.config');
 const { create, engine } = require('express-handlebars');
 const app = express();
+const ip = require('ip');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ limit: '100mb' }));
@@ -49,7 +50,6 @@ app.use(
     ? morgan('combined', { stream: accessLogStream })
     : morgan('dev'),
 );
-
 const port = process.env.PORT || 3000;
 router(app);
 app.listen(port, () => {

@@ -4,6 +4,7 @@ const cloudinary = require('../config/cloudinary.config');
 const handleHtml = require('../services/handleHtml');
 const fs = require('fs');
 const QRCode = require('qrcode');
+const ip = require('ip');
 
 class UserService {
   async login(username, password) {
@@ -17,7 +18,7 @@ class UserService {
   }
 
   async mapData(user) {
-    const url = 'http://192.168.1.6:3000/';
+    const url = `http://${ip.address()}:3000/`;
     user.avatar = url + user?.avatar;
     user.video = url + user?.video;
     user.url = url + user?.url?.slice(1);
@@ -65,7 +66,14 @@ class UserService {
   async findById(id) {
     const user = await User.findById(id);
     await this.mapData(user);
+    // await handleHtml.exportToImg(user);
     return user;
   }
+
+  // async findById1(id) {
+  //   const user = await User.findById(id);
+  //   await this.mapData(user);
+  //   return user;
+  // }
 }
 module.exports = new UserService();

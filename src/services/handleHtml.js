@@ -3,6 +3,7 @@ const path = require('path');
 const handlebars = require('handlebars');
 const QRCode = require('qrcode');
 const puppeteer = require('puppeteer');
+const ip = require('ip');
 
 class HandleHtml {
   readFile(fileName) {
@@ -23,6 +24,7 @@ class HandleHtml {
   }
 
   async exportToImg(user) {
+    console.log(user);
     const date = new Date().getTime();
     const pathFile = path.join(
       __dirname,
@@ -32,21 +34,31 @@ class HandleHtml {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    await page.goto(`http://192.168.1.6:3000/api/users/test/${user.id}`, {
+    await page.goto(`http://${ip.address()}:3000/api/users/test/${user.id}`, {
       waitUntil: 'networkidle0',
     });
+    console.log('vao day');
 
-    await page.setViewport({ width: 420, height: 245 });
+    const selector = '.container-child';
 
-    const screenshot = await page.screenshot({
-      type: '',
+    const element = await page.$(selector);
+    await page.waitForSelector(selector);
+
+    await element.screenshot({
       path: pathFile,
-      fullPage: true,
     });
 
-    require('fs').writeFileSync(pathFile, screenshot);
+    // await page.setViewport({ width: 420, height: 245 });
+
+    // const screenshot = await page.screenshot({
+    //   type: '',
+    //   path: pathFile,
+    //   fullPage: true,
+    // });
+
+    // require('fs').writeFileSync(pathFile, screenshot);
     await browser.close();
-    const urlHost = 'http://192.168.1.6:3000';
+    const urlHost = `http://${ip.address()}:3000`;
     return {
       urlHost: urlHost + `/public/images/${date}_${user.id}.png`,
       url: `/public/images/${date}_${user.id}.png`,

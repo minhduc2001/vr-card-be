@@ -1,6 +1,7 @@
 const User = require('../models/user.model');
 // const cloudinary = require('../config/cloudinary');
 const userService = require('../services/userService');
+const ip = require('ip');
 
 class UserController {
   async login(req, res) {
@@ -14,14 +15,11 @@ class UserController {
       video: req.files['dataVideo'][0].path,
     });
     console.log(resp);
-    return res
-      .status(200)
-      .json({
-        imgAfter:
-          'https://ae54-123-17-150-73.ngrok-free.app/public/images/ms.png',
-        imgBefore: resp.img,
-        id: resp.id,
-      });
+    return res.status(200).json({
+      imgAfter: `http://${ip.address()}:3000/public/images/ms.png`,
+      imgBefore: resp.img,
+      id: resp.id,
+    });
   }
 
   async getAll(req, res) {

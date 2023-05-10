@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  dev:
+    container_name: vr-card
+    image: vr-carddev:1.0.0
+    build:
+      context: .
+      target: development
+      dockerfile: ./Dockerfile
+    command: yarn dev
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    restart: unless-stopped
+    env_file:
+      - .env
